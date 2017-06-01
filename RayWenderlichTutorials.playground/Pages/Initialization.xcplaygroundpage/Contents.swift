@@ -39,3 +39,49 @@ if let tankStatus = TankStatus(currentVolume: -10.0,
 let johnny = try? Astronaut(name: "Johnny Cosmos", age: 42)
 let timmy = try? Astronaut(name: "Timmy Galaxy", age: 17)
 
+// MARK: - Class Designated Initializer
+
+let payload = RocketComponent(model: "RT-1",
+                              serialNumber: "234",
+                              reusable: false)
+
+// Mark: - Convenience Class Initializer
+
+let fairing = RocketComponent(model: "Serpent",
+                              serialNumber: "o")
+
+// MARK: - Failable Class Initializer
+
+let component = RocketComponent(identifier: "R2-D21",
+                                reusable: true)
+let nonComponent = RocketComponent(identifier: "",
+                                   reusable: true)
+
+// MARK: - Inherited Initializers
+
+let fuelTank = Tank(model: "Athena",
+                    serialNumber: "003",
+                    reusable: true)
+print(fuelTank)
+
+let liquidOxygenTank = Tank(identifier: "LOX-012",
+                            reusable: true)
+print(liquidOxygenTank)
+
+let rp1Tank = LiquidTank(model: "Hermes",
+                         serialNumberInt: 5,
+                         reusable: 1,
+                         encasingMaterial: "Aluminum",
+                         liquidType: "LOX")
+print(rp1Tank)
+
+let loxTank = LiquidTank(identifier: "LOX-1",
+                         reusable: true)
+print(loxTank)
+
+// MARK: - Failable Inherited Initializers
+
+let athenaFuelTank = LiquidTank(identifier: "Athena-9",
+                                reusable: true,
+                                encasingMaterial: "Aluminum",
+                                liquidType: "RP-1")

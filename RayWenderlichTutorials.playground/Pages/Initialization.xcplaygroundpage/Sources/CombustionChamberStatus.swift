@@ -13,12 +13,12 @@ public struct CombustionChamberStatus {
     }
     
     public init(temperatureCelcius: Double, pressureAtmospheric: Double) {
-        print("Phase 1 delegaating init")
+        print("Phase 1 delegating init")
         let temperatureKelvin = temperatureCelcius + 273.15
         let pressureKiloPascals = pressureAtmospheric * 101.325
         self.init(temperatureKelvin: temperatureKelvin,
                   pressureKiloPascals: pressureKiloPascals)
-        print("phase 2 delegating init")
+        print("Phase 2 delegating init")
     }
 }
 
